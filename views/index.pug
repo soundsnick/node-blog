@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(href="/assets/stylesheets/main.css" rel="stylesheet")
+  body
+    include components/header
+    = message
+    .posts
+      .container
+        each post in posts
+          .post(data-id= post.id)
+            h3.post__title= post.title
+            p.post__content= post.content
+      
